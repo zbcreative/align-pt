@@ -309,6 +309,12 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
 .footer-credit a { color:rgba(255,255,255,.5); text-decoration:underline; text-underline-offset:3px; }
 .footer-credit a:hover { color:var(--teal-light); }
 
+/* SCROLL TO TOP */
+.scroll-top { position:fixed; bottom:32px; right:32px; width:48px; height:48px; border-radius:50%; background:var(--teal); color:var(--white); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(95,142,149,.35); z-index:998; opacity:0; visibility:hidden; transform:translateY(16px); transition:all .4s var(--ease); }
+.scroll-top.visible { opacity:1; visibility:visible; transform:translateY(0); }
+.scroll-top:hover { background:var(--teal-deep); transform:translateY(-3px); box-shadow:0 8px 30px rgba(95,142,149,.45); }
+.scroll-top svg { width:22px; height:22px; }
+
 /* RESPONSIVE */
 @media(max-width:1024px) {
     .sc { padding:0 40px; }
@@ -360,7 +366,6 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
 </style>
 </head>
 <body>
-
 
     <header class="nav" role="banner">
         <a href="/" class="nav-logo" aria-label="Align Physical Therapy Home">
@@ -599,12 +604,12 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
                         <span class="s-label">FAQ</span>
                         <h2 id="faq-h" class="s-title">Common <strong>Questions</strong></h2>
                         <p class="faq-side-text">Have a question that is not listed here? Reach out directly and Dr. Fallert will be happy to help.</p>
-                        <a href="/cdn-cgi/l/email-protection#86cde0e7eaeae3f4f2c6c7eaefe1e8d6d2f5f2eaa8e5e9eb" class="btn-s">Email Dr. Fallert</a>
+                        <a href="mailto:Kfallert@AlignPTstl.com" class="btn-s">Email Dr. Fallert</a>
                     </div>
                     <div class="faq-items reveal-right">
                         <div class="faq-item active">
                             <div class="faq-q" role="button" tabindex="0" aria-expanded="true"><h3>Do I need a referral for physical therapy?</h3><div class="faq-t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div></div>
-                            <div class="faq-a"><div class="faq-a-inner">No referral is needed. Missouri allows direct access to physical therapy, which means you can schedule your initial evaluation at Align Physical Therapy without a doctor's referral. Just call (314) 630-2403 or email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dc97babdb0b0b9aea89c9db0b5bbb28c88afa8b0f2bfb3b1">[email&#160;protected]</a> to book.</div></div>
+                            <div class="faq-a"><div class="faq-a-inner">No referral is needed. Missouri allows direct access to physical therapy, which means you can schedule your initial evaluation at Align Physical Therapy without a doctor's referral. Just call (314) 630-2403 or email Kfallert@AlignPTstl.com to book.</div></div>
                         </div>
                         <div class="faq-item">
                             <div class="faq-q" role="button" tabindex="0" aria-expanded="false"><h3>Does Align Physical Therapy accept insurance?</h3><div class="faq-t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div></div>
@@ -649,7 +654,7 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
                             </div>
                             <div class="cd-item">
                                 <div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                                <div><div class="cd-label">Email</div><div class="cd-val"><a href="/cdn-cgi/l/email-protection#3a715c5b56565f484e7a7b56535d546a6e494e5614595557"><span class="__cf_email__" data-cfemail="5a113c3b36363f282e1a1b36333d340a0e292e3674393537">[email&#160;protected]</span></a></div></div>
+                                <div><div class="cd-label">Email</div><div class="cd-val"><a href="mailto:Kfallert@AlignPTstl.com">Kfallert@AlignPTstl.com</a></div></div>
                             </div>
                             <div class="cd-item">
                                 <div class="cd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -681,6 +686,10 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
             </div>
         </section>
     </main>
+
+    <button class="scroll-top" aria-label="Scroll to top" title="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -731,7 +740,7 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
                         10505 Big Bend BLVD, Suite C Unit 2<br>
                         Kirkwood, MO 63112<br><br>
                         <a href="tel:+13146302403" style="color:rgba(255,255,255,.65);">(314) 630-2403</a><br>
-                        <a href="/cdn-cgi/l/email-protection#6e25080f02020b1c1a2e2f020709003e3a1d1a02400d0103" style="color:rgba(255,255,255,.65);"><span class="__cf_email__" data-cfemail="763d10171a1a13040236371a1f1118262205021a5815191b">[email&#160;protected]</span></a>
+                        <a href="mailto:Kfallert@AlignPTstl.com" style="color:rgba(255,255,255,.65);">Kfallert@AlignPTstl.com</a>
                     </div>
                 </div>
             </div>
@@ -742,7 +751,7 @@ body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index
         </div>
     </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Scroll reveal observer
 document.addEventListener('DOMContentLoaded', function() {
     var observer = new IntersectionObserver(function(entries) {
@@ -800,4 +809,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         question.addEventListener('keydown', function(e) {
-            if (e.key
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Scroll to top button
+    var scrollBtn = document.querySelector('.scroll-top');
+    if (scrollBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+});
+
+</script>
+</body>
+</html>
